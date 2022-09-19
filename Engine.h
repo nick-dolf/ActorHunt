@@ -9,17 +9,18 @@
 */
 #ifdef _WIN32
 #include <Windows.h>
+#include <iostream>
 #elif __unix__
 #include <ncurses.h>
 #include <string.h>
 #include <unistd.h>
 typedef unsigned short SHORT;
+#endif
+
 /**
 * Handles Screen Output for different OS' 
 */
 void PrintToScreen(std::string str);
-#endif
-
 
 class Actor;
 class World;

@@ -2,16 +2,16 @@
 
 using namespace std;
 
-#ifdef __unix__
-	void PrintToScreen(std::string str) 
-	{
-		#ifdef _WIN32 // WINDOWS
-			cout << str << endl;
-		#elif __unix__ // UNIX
-			printw("%s\n", str.c_str());
-		#endif
-	}
-#endif
+
+void PrintToScreen(std::string str) 
+{
+	#ifdef _WIN32 // WINDOWS
+		cout << str << endl;
+	#elif __unix__ // UNIX
+		printw("%s\n", str.c_str());
+	#endif
+}
+
 
 Component::~Component()
 {
